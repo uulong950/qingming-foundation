@@ -4,6 +4,8 @@
 
 **Qingming Foundation** 是 Qingming 系列已完成底层 primitive artifact 的中心地基仓库。
 
+Qingming 系列既建立一套共同的衡量语言，也提供有力的性能证据。
+
 本仓库只收录已经达到 Qingming-style 标准的 artifact：明确的 contract、独立验证、benchmark 边界、实现，以及仓库级可复现路径。
 
 Qingming 不是排行榜，也不是 demo 集合。
