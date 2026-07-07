@@ -4,6 +4,8 @@
 
 **Qingming Foundation** is the central foundation repository for completed Qingming-series primitive artifacts.
 
+The Qingming series establishes both a common language for measurement and compelling performance evidence.
+
 It collects only artifacts that have reached a Qingming-style level: explicit contract, independent validation, benchmark boundary, implementation, and repository-level reproducibility.
 
 Qingming is not a leaderboard and not a collection of demos.
