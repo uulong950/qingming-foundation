@@ -13,11 +13,14 @@ It is a foundation layer for turning low-level primitive performance claims into
 
 ## Scope
 
-This repository only lists Qingming artifacts that are already completed to an initial public standard.
+Qingming Foundation only lists completed Qingming-style primitive artifacts.
 
-A repository may be listed here only if it provides:
+This repository does not list demos, experiments, roadmaps, internal prototypes, or ordinary implementations. A project may enter Qingming Foundation only after it reaches the minimum Qingming-style bar: it must define the structure of a primitive benchmark, provide a validated implementation, report a clear performance boundary, and establish a new baseline that can be used as a foundation for future work.
+
+A listed artifact must provide:
 
 * a clear primitive definition
+* an explicit benchmark structure
 * an explicit benchmark contract
 * an implementation
 * correctness or validation checks
@@ -25,8 +28,13 @@ A repository may be listed here only if it provides:
 * hardware environment
 * build / run path
 * clear supported and unsupported boundaries
+* repository-level reproducibility
 
-Unreleased, experimental, internal, or not-yet-restructured projects are not listed.
+The minimum bar for inclusion is not implementation alone.
+
+A Qingming Foundation entry should be a foundation-moving artifact in its own primitive domain: it should clarify how the primitive is structured, how it should be measured, what boundary the implementation reaches, and how others can reproduce or challenge the result.
+
+Unreleased, experimental, internal, not-yet-restructured, or non-Qingming-style projects are not listed here.
 
 ---
 
