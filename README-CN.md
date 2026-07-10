@@ -68,6 +68,7 @@ No validation, no foundation entry.
 | --------------------- | ----------------------------------- | -------: | -------------: | --------: | ---------: | ------ |
 | Qingming-G64-NTT-CUDA | Native Goldilocks/G64 STARK-LDE NTT |      Yes |    NVIDIA CUDA |       Yes |        Yes | Public |
 | Qingming-G64-NTT      | Native Goldilocks/G64 STARK-LDE NTT |      Yes | AMD HIP / ROCm |       Yes |        Yes | Public |
+| Qingming-STARK-G64 | Goldilocks/G64 STARK proving backend | Yes | AMD HIP / ROCm | Yes | Yes | Public |
 
 `Validation` 表示该 artifact 已经通过作者侧的独立验证，例如正确性检查、CPU reference 对比、roundtrip 测试、固定 benchmark 运行，或 release-suite 检查。
 
