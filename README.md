@@ -68,6 +68,7 @@ A Qingming-style artifact should make the following explicit:
 | --------------------- | ----------------------------------- | -------: | -------------: | --------: | ---------: | ------ |
 | Qingming-G64-NTT-CUDA | Native Goldilocks/G64 STARK-LDE NTT |      Yes |    NVIDIA CUDA |       Yes |        Yes | Public |
 | Qingming-G64-NTT      | Native Goldilocks/G64 STARK-LDE NTT |      Yes | AMD HIP / ROCm |       Yes |        Yes | Public |
+| Qingming-STARK-G64 | Goldilocks/G64 STARK proving backend | Yes | AMD HIP / ROCm | Yes | Yes | Public |
 
 `Validation` means that the artifact has passed author-side independent validation, such as correctness checks, CPU reference comparison, roundtrip tests, fixed benchmark runs, or release-suite checks.
 
@@ -133,6 +134,32 @@ RX 7900 XTX reaches `domain_logn=27` with reported fast-path effective logical b
 **Repository.**
 https://github.com/uulong950/qingming-g64-ntt
 
+---
+## 2. G64-STARK Series
+
+G64-STARK is the next Qingming foundation line above the G64-NTT primitive layer.
+
+It focuses on a reproducible Goldilocks/G64 STARK proving and verification backend, with an explicit proof-file boundary, deterministic protocol contract, standalone verifier, and repository-level reproducibility.
+
+---
+
+### 2.1 Qingming-STARK-G64
+
+**Domain.** Goldilocks/G64 STARK backend on AMD HIP / ROCm.
+
+**What this work does.** This artifact provides a source-visible, CLI-based QSPG64 STARK proving and verification backend. It defines a small official integration surface:
+
+* CLI prover
+* QSPG64 `.qsp` proof file
+* standalone verifier
+
+The backend binds public inputs, statement digest, trace commitment, quotient commitment, Merkle openings, FRI proof material, and local AIR verifier material into a complete QSPG64 proof boundary.
+
+**Contract.** The artifact fixes the Goldilocks/G64 field contract, Poseidon2-G64 hash contract, compiled AIR profile, proof format, retained-Merkle-tree proof-builder behavior, and standalone verification checks.
+
+**Boundary.** RX 7900 XTX 24GB is the verified backend target. The retained-tree proving matrix is verified from `SCALE20` through `SCALE27`, with `SCALE27` as the primary FAST XYZ benchmark.
+
+**Repository.** https://github.com/uulong950/qingming-stark-g64
 ---
 
 ## Layering
