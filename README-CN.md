@@ -134,6 +134,33 @@ RX 7900 XTX 在 Qingming G64/STARK-LDE benchmark contract 下达到 `domain_logn
 https://github.com/uulong950/qingming-g64-ntt
 
 ---
+## 2. G64-STARK Series
+
+G64-STARK 是位于 G64-NTT primitive layer 之上的下一条 Qingming foundation line。
+
+它聚焦于一个可复现的 Goldilocks/G64 STARK proving 与 verification backend，并明确 proof-file boundary、deterministic protocol contract、standalone verifier 和仓库级复现路径。
+
+---
+
+### 2.1 Qingming-STARK-G64
+
+**Domain.** AMD HIP / ROCm 上的 Goldilocks/G64 STARK backend。
+
+**What this work does.** 该 artifact 提供了一个 source-visible、CLI-based 的 QSPG64 STARK proving 与 verification backend。它将官方 integration surface 有意保持为很小的边界：
+
+* CLI prover
+* QSPG64 `.qsp` proof file
+* standalone verifier
+
+该 backend 将 public inputs、statement digest、trace commitment、quotient commitment、Merkle openings、FRI proof material 和 local AIR verifier material 绑定到完整的 QSPG64 proof boundary 中。
+
+**Contract.** 该 artifact 明确固定了 Goldilocks/G64 field contract、Poseidon2-G64 hash contract、compiled AIR profile、proof format、retained-Merkle-tree proof-builder 行为，以及 standalone verification checks。
+
+**Boundary.** RX 7900 XTX 24GB 是已验证的 backend target。retained-tree proving matrix 已验证 `SCALE20` 到 `SCALE27`，其中 `SCALE27` 是 primary FAST XYZ benchmark。
+
+**Repository.** https://github.com/uulong950/qingming-stark-g64
+
+---
 
 ## Layering
 
