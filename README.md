@@ -159,7 +159,9 @@ The backend binds public inputs, statement digest, trace commitment, quotient co
 
 **Boundary.** RX 7900 XTX 24GB is the verified backend target. The retained-tree proving matrix is verified from `SCALE20` through `SCALE27`, with `SCALE27` as the primary FAST XYZ benchmark.
 
-**Repository.** https://github.com/uulong950/qingming-stark-g64
+**Repository.** 
+https://github.com/uulong950/qingming-stark-g64
+
 ---
 
 ## Layering
